@@ -1,0 +1,35 @@
+<html>  
+   <style>
+    .navbar {
+      justify-content: space-between;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <div><a href="/rock">Play Rock</a></div>
+    <div><a href="/paper">Play Paper</a></div>
+    <div><a href="/scissors">Play Scissors</a></div>
+    <%= yield %>
+</body>
+
+<body>
+  <h2>We played paper!</h2>
+
+  <h2>They played <%= @random_move %>!</h2>
+
+<% if @random_move == "paper" %>
+  <h2>We tied!</h2>
+
+<% elsif @random_move == "scissors" %>
+  <h2>We lost!</h2>
+
+<% else %>
+  <h2>We won!</h2>
+<% end %>
+
+
+  <div><a href="/">Rules</a></div>
+</body>
+</html>
